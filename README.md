@@ -66,7 +66,7 @@ flowchart LR
 
 | MediaPipe 手势识别 | LLM 自然语言控制 |
 | --- | --- |
-| <img src="media/gesture-mediapipe.png" alt="MediaPipe 手势识别" width="100%"> | [演示视频：自然语言转 JSON 指令](media/llm-natural-language-json.mp4) |
+| <img src="media/gesture-mediapipe.png" alt="MediaPipe 手势识别" width="100%"> | [<img src="media/llm-natural-language-json-preview.jpg" alt="LLM 自然语言转 JSON 指令演示封面" width="100%">](media/llm-natural-language-json.mp4)<br/>点击封面查看完整 MP4 演示 |
 
 ## 快速运行
 
