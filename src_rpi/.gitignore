@@ -1,0 +1,4 @@
+ugv-env/
+__pycache__/
+templates/pictures/photo*
+templates/videos/video*

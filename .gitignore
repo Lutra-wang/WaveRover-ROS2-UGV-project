@@ -1,0 +1,43 @@
+# Local editor / assistant metadata
+.codex/
+.agents/
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# ROS2 / colcon build outputs
+/build/
+/install/
+/log/
+src_ws/build/
+src_ws/install/
+src_ws/log/
+src_base/build/
+src_rpi/build/
+
+# Runtime data
+*.bag
+*.db3
+*.mcap
+*.log
+
+# Local environments and secrets
+.env
+.env.*
+venv/
+.venv/
+env/
+
+# OS / temporary files
+.DS_Store
+Thumbs.db
+*~
