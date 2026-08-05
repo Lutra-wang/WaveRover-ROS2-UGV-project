@@ -1,8 +1,20 @@
-# WaveRover ROS2 UGV Project
+<h1 align="center">WaveRover ROS2 UGV Project</h1>
 
-面向机器人/嵌入式/ROS2 实习岗位的项目展示 README。项目基于 Waveshare UGV Rover 平台，在官方开源代码和教程基础上完成 ROS2 Humble 系统集成、SLAM 建图、自主导航、视觉识别和 LLM 自然语言控制链路验证。
+<p align="center">
+  面向机器人 / 嵌入式 / ROS2 实习岗位的 UGV 系统集成项目
+  <br>
+  <sub>ROS2 Humble · SLAM · NAV2 · OpenCV · MediaPipe · Flask · LLM Control</sub>
+</p>
+
+<p align="center">
+  <img src="media/robot-platform.jpg" alt="Waveshare UGV Rover platform" width="720">
+</p>
+
+项目基于 Waveshare UGV Rover 平台，在官方开源代码和教程基础上完成 ROS2 Humble 系统集成、SLAM 建图、自主导航、视觉识别和 LLM 自然语言控制链路验证。
 
 > 项目性质说明：本仓库不是从零实现完整机器人系统，而是以 Waveshare UGV 官方工程为基础的二次集成、调试验证和能力扩展记录。README 重点展示我在真实硬件、ROS2 工程链路和问题排查中的实践能力。
+
+完整开发过程见：[WaveRover ROS2 UGV 小车项目开发报告](docs/development-report.md)。
 
 ## 项目概览
 
@@ -13,6 +25,43 @@
 | 运行环境 | Raspberry Pi OS + ROS2 Humble Docker，本地 Ubuntu 24.04 + Gazebo/RViz 仿真 |
 | 学习周期 | 2026.05.02 - 2026.05.27 |
 | 角色定位 | ROS2 机器人系统集成与自主导航开发负责人 |
+
+## 成果展示
+
+### LLM 自然语言控制
+
+<p align="center">
+  <a href="media/llm-natural-language-json.mp4">
+    <img src="media/llm-natural-language-json-preview.jpg" alt="LLM 自然语言转 JSON 指令演示封面" width="760">
+  </a>
+  <br>
+  <sub>自然语言请求经本地 LLM 转为结构化 JSON 行为指令，再由 ROS Action 下发到底盘控制链路。点击图片查看完整 MP4 演示。</sub>
+</p>
+
+### ROS2 建图与自主探索
+
+<table>
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <img src="media/slam-2d.png" alt="2D SLAM 建图" width="100%">
+      <br>
+      <sub><b>2D SLAM 建图</b><br>LiDAR + RViz 栅格地图构建，验证 Gmapping / Cartographer 建图流程。</sub>
+    </td>
+    <td width="50%" align="center" valign="top">
+      <img src="media/exploration-map.png" alt="自主探索建图" width="100%">
+      <br>
+      <sub><b>自主探索建图</b><br>NAV2 与 explore_lite 联动，在封闭空间内进行探索和地图增量生成。</sub>
+    </td>
+  </tr>
+</table>
+
+### 视觉识别验证
+
+<p align="center">
+  <img src="media/gesture-mediapipe.png" alt="MediaPipe 手势识别" width="620">
+  <br>
+  <sub>基于 MediaPipe 的手势关键点检测，用于验证摄像头链路和视觉交互能力。</sub>
+</p>
 
 ## 我完成了什么
 
@@ -57,16 +106,6 @@ flowchart LR
 | 视觉感知 | OpenCV、MediaPipe、AprilTag、HSV 颜色空间、形态学滤波 |
 | Web/AI | Flask、JupyterLab、HTTP streaming、Ollama/local LLM、JSON 行为指令 |
 | 工程环境 | Docker、Raspberry Pi OS、Ubuntu 24.04、Gazebo 11 |
-
-## 成果展示
-
-| 2D SLAM 建图 | 自主探索建图 |
-| --- | --- |
-| <img src="media/slam-2d.png" alt="2D SLAM 建图" width="100%"> | <img src="media/exploration-map.png" alt="自主探索建图" width="100%"> |
-
-| MediaPipe 手势识别 | LLM 自然语言控制 |
-| --- | --- |
-| <img src="media/gesture-mediapipe.png" alt="MediaPipe 手势识别" width="100%"> | [<img src="media/llm-natural-language-json-preview.jpg" alt="LLM 自然语言转 JSON 指令演示封面" width="100%">](media/llm-natural-language-json.mp4)<br/>点击封面查看完整 MP4 演示 |
 
 ## 快速运行
 
